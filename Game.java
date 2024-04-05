@@ -7,7 +7,7 @@ public class Game implements GameInterface {
 	private int count=0,pcount=0;
 	
 	Game(int level){
-		level--;
+	
 		board= new char[levels[level].length][];
 		
 		for(int i =0; i< board.length;i++ ) {         	//arraying the board
@@ -35,7 +35,7 @@ public class Game implements GameInterface {
 		}
 		return true;
 	}
-
+		// we don't really need to check boundary condition, since all the levels have walls covering all sides .
 	public void up() {
 		if (i!=0 && board[i-1][j]!=WALL) {	
 			movePlayer(true,false);
@@ -62,7 +62,7 @@ public class Game implements GameInterface {
 		}
 	}
 	
-	public void movePlayer(boolean ij ,boolean pm) {//(true,true)=i++;(true,false)=i--;(flase,true)=j++;(false,false)=j--;
+	public void movePlayer(boolean ij ,boolean pm) {//(true,true)=i++;(true,false)=i--;(false,true)=j++;(false,false)=j--;
 		board[i][j]=EMPTY;
 		
 		if(ij) {
