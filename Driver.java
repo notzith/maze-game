@@ -15,7 +15,7 @@ public class Driver {
 		System.out.println("pic a level from 1 to 5");
 		int i = sc.nextInt();
 		
-		GameInterface g=i>0&&i<6?new Game(i):new Game(1);
+		GameInterface g=i>0&&i<6?new Game(i-1):new Game(1);
 		g.printCurentState();
 		System.out.println("\'use wasd to move and q to quit\'");
 		char c=' ';
