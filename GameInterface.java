@@ -1,22 +1,6 @@
 package gameOne;
 
 public interface GameInterface {
-	String[][] levels={
-			{
-		
-			},{
-		    
-			},{
-		    
-			},{                            
-
-			},{
-
-		}};
-	
-	
-	
-	
 	char WALL='#',PLAYER='o',PRIZE='.',EMPTY=' ';
 	void up();
 	void down();
@@ -24,7 +8,7 @@ public interface GameInterface {
 	void right();
 	void printCurentState();
 
-	int[] statusBar(); // make a array of two elements at location [0] have the moves made so far and
+	int[] statusBar(); 	// make a array of two elements at location 
+						//[0] have the moves made so far and
 						// [1] store the prizes remaining;
-
 }
